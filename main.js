@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const button = document.querySelector('.countdown-button');
     const countdownContainer = document.querySelector('#countdown');
     const progressBar = document.querySelector('#barraProgresso');
+    const loadingText = document.querySelector('h3'); // Seleciona o elemento h3
 
     button.addEventListener('click', function () {
         // Oculta o botão
@@ -45,5 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
         // Mostra o container do temporizador e a barra de progresso
         countdownContainer.style.display = 'block';
         progressBar.style.display = 'block';
+        loadingText.style.display = 'block'; // Adiciona esta linha para mostrar o h3
     });
-});
+    });
