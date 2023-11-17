@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Defina a data do Natal
     const christmasDate = new Date('December 25, 2023 00:00:00').getTime();
+    
+    // Defina a data inicial dois meses antes do Natal
+    const startDate = new Date(christmasDate);
+    startDate.setMonth(startDate.getMonth() - 2);
+    
     let progresso = 0;
 
     const countdown = setInterval(function () {
@@ -16,7 +22,11 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('minutes').innerHTML = minutes + 'm';
         document.getElementById('seconds').innerHTML = seconds + 's';
 
-        progresso = ((25 - days) / 25) * 100; // Ajuste para a barra de progresso (25 dias até o Natal)
+        // Calcule o progresso com base no intervalo de dois meses
+        const totalDays = (christmasDate - startDate.getTime()) / (1000 * 60 * 60 * 24);
+        const daysPassed = (now - startDate.getTime()) / (1000 * 60 * 60 * 24);
+        progresso = (daysPassed / totalDays) * 100;
+
         document.getElementById('progresso').style.width = progresso + '%';
 
         if (distance < 0) {
