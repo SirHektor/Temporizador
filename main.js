@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const christmasDate = new Date('December 25, 2023 00:00:00').getTime();
+    let progresso = 0;
 
     const countdown = setInterval(function () {
         const now = new Date().getTime();
@@ -15,6 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('minutes').innerHTML = minutes + 'm';
         document.getElementById('seconds').innerHTML = seconds + 's';
 
+        progresso = ((25 - days) / 25) * 100; // Ajuste para a barra de progresso (25 dias até o Natal)
+        document.getElementById('progresso').style.width = progresso + '%';
+
         if (distance < 0) {
             clearInterval(countdown);
             document.getElementById('countdown').innerHTML = 'Feliz Natal!';
@@ -23,11 +27,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const button = document.querySelector('.countdown-button');
     const countdownContainer = document.querySelector('#countdown');
+    const progressBar = document.querySelector('#barraProgresso');
 
     button.addEventListener('click', function () {
         // Oculta o botão
         button.style.display = 'none';
-        // Mostra o container do temporizador
+        // Mostra o container do temporizador e a barra de progresso
         countdownContainer.style.display = 'block';
+        progressBar.style.display = 'block';
     });
 });

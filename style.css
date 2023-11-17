@@ -194,3 +194,20 @@ h1 {
     color: white;
     font-family: at, sans-serif;
 }
+
+#barraProgresso {
+    display: none;
+    width: 80%;
+    margin: 20px auto;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+#progresso {
+    height: 100%;
+    width: 0;
+    background-color: #4caf50;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
