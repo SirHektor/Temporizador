@@ -1,3 +1,11 @@
+@font-face {
+    font-family: at;
+    src: url(atwriter.ttf);
+}
+
+
+
+
 body {
     font-family: 'Arial', sans-serif;
     display: flex;
@@ -5,7 +13,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-image: url(131391207_1276196882767539_3473664511434391307_n.jpg);
+    background-image: url(sarah-hochsteiner-final.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -92,7 +100,7 @@ button {
   
   button:hover {
     background: transparent;
-    color: #FEC195;
+    color: #717cb3;
     box-shadow: 0 0 25px #BDA9FC;
   }
   
@@ -157,13 +165,8 @@ button {
   }
   
   .fil0 {
-    fill: #B57DFA
+    fill: white
   }
-
-
-
-
-
 
 .countdown-container {
     text-align: center;
@@ -176,6 +179,7 @@ button {
 }
 
 #countdown {
+    display: none;
     margin-top: 20px;
     color: red;
     box-sizing: border-box;
@@ -183,9 +187,10 @@ button {
     border: 2px solid black; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 30px;
-    background-color: rgba(255, 147, 147, 0.5);
+    background-color: rgba(162, 199, 247, 0.5);;
 }
 
 h1 {
     color: white;
+    font-family: at, sans-serif;
 }
